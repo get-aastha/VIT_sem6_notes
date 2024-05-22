@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <h1>Search Results</h1>
+  <p>You searched for: {{ keyword }}</p>
+  {% if images %}
+    <h2>Images</h2>
+    <ul>
+      {% for image in images %}
+        <li><img src="{{ image }}" alt="Madhuri Dixit Image"></li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>No images found for your search.</p>
+  {% endif %}
+</body>
+</html>

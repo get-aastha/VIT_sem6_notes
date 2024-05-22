@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+</head>
+<body>
+    <h2>Login Page</h2>
+    <form action="/login" method="post">
+        <label for="email">Email:</label><br>
+        <input type="text" id="email" name="email" value="{{ request.form['email'] if 'email' in request.form else '' }}"><br>
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password" value="{{ request.form['password'] if 'password' in request.form else '' }}"><br><br>
+        <input type="submit" value="Login">
+    </form>
+</body>
+</html>
